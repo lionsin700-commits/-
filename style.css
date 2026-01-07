@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+/* style.css - 可愛版 */
+
+/* 1. 引入可愛字體 (已在上方加入 import) */
+
+/* 2. 整體背景設定 */
+body {
+    /* 背景改成柔和的奶油黃色 */
+    background-color: #FFF8E7;
+    /* 使用我們引入的 Fredoka 字體 */
+    font-family: 'Fredoka', sans-serif;
+    /* 字體顏色改成柔和的深棕色，不要用純黑 */
+    color: #5A4A42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* 3. 測驗卡片容器 */
+.quiz-container {
+    background: #FFFFFF;
+    padding: 30px;
+    /* 超級大的圓角 */
+    border-radius: 25px;
+    /*加上粉紅色的邊框 */
+    border: 4px solid #FFD1DC;
+    /* 柔和的粉色陰影，看起來浮浮的 */
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+    width: 90%; /* 手機版比較好讀 */
+    max-width: 450px;
+    text-align: center;
+}
+
+/* 題目樣式 */
+#question {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    color: #FF8DA1; /* 題目用可愛的深粉色 */
+}
+
+/* 4. 按鈕區域佈局 */
+.btn-grid {
+    display: grid;
+    gap: 15px; /* 按鈕之間的距離加大 */
+    margin: 20px 0;
+}
+
+/* 5. 所有按鈕的通用樣式 (選項 + 下一題) */
+button {
+    font-family: 'Fredoka', sans-serif; /* 確保按鈕也用可愛字體 */
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    /* 變成膠囊形狀 */
+    border-radius: 50px;
+    /* 預設是柔和的淺藍色背景 */
+    background-color: #E0F7FA;
+    border: 3px solid #B2EBF2;
+    color: #5A4A42;
+    cursor: pointer;
+    /* 加入彈跳動畫的過渡效果 */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+}
+
+/* 滑鼠移過按鈕的效果 */
+button:hover {
+    background-color: #B2EBF2;
+    /* 往上浮動一點點，有QQ的感覺 */
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 6. 答對的樣式 (JS會加上這個class) */
+.correct {
+    /* 馬卡龍綠色 */
+    background-color: #C3FBD8 !important;
+    border-color: #98F5E1 !important;
+    color: #006d4f;
+}
+/* 在正確答案後面加上 Emoji */
+.correct::after {
+    content: " 🎉";
+}
+
+/* 7. 答錯的樣式 (JS會加上這個class) */
+.wrong {
+    /* 馬卡龍紅色 */
+    background-color: #FFD6D6 !important;
+    border-color: #FFB4B4 !important;
+    color: #8a2b2b;
+}
+/* 在錯誤答案後面加上 Emoji */
+.wrong::after {
+    content: " 🥲";
+}
+
+/* 8. 「下一題」按鈕特別樣式 */
+#next-btn {
+    background-color: #FFE082; /* 亮黃色 */
+    border-color: #FFD54F;
+    color: #7F5F00;
+    margin-top: 15px;
+    width: 100%;
+}
+#next-btn:hover {
+    background-color: #FFD54F;
+}
+
+/* 隱藏用的 class */
+.hide {
+    display: none;
+}
