@@ -183,7 +183,7 @@ nextBtn.onclick = () => {
         showQuestion();
     } else {
         showResult();
-    }
+    } 
 };
 
 function showResult() {
